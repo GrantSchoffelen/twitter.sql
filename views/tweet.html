@@ -1,0 +1,16 @@
+<div class="tweetbox">
+  <img src="http://lorempixel.com/48/48?{{ tweet.id }}"/>
+  <div class="content">
+  	{% if tweet_user %}
+    <div class="by"><a href="/users/{{ tweet.User.name }}">{{ tweet.User.name }}</a></div>
+    <div><a href="/users/{{ tweet.User.name }}/tweets/{{ tweet.id }}">{{tweet.tweet}}</a></div>
+    {% else %}
+
+    <div class="by"><a href="/users/{{ name }}">{{ tweet.User.name }}</a></div>
+    <div><a href="/users/{{ name }}/tweets/{{ tweet.id }}">{{tweet.tweet}}</a></div>
+    {% endif %}
+  </div>
+</div>
+
+<!-- //console.log(JSON.stringify(tweets));
+		Tweet.find ({where: {id:1}}).success(function(tweets) -->
